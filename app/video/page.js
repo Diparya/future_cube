@@ -1,45 +1,11 @@
-'use client';
-import React, { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+// pages/video.js
+import VideoPlayer from '@/components/VideoPlayer';
+import React, { Suspense } from 'react';
 
-const videos = [
-    'videos/food_system.mp4',
-    'videos/water_supplies.mp4',
-    'videos/farm_work.mp4',
-    'videos/air_purifier.mp4',
-    'videos/waste_resources.mp4',
-    'videos/earth.mp4'
-  ];
-
-const VideoPage = () => {
-  const searchParams = useSearchParams();
-  const face = searchParams.get('face');
-
-  useEffect(() => {
-    const videoElement = document.getElementById('video');
-    if (videoElement) {
-      videoElement.play();
-    }
-  }, [face]);
-
-  if (face === null || face >= videos.length) {
-    return <p>Loading...</p>;
-  }
-
+export default function VideoPage() {
   return (
-    <div className="video-container">
-      <video
-        id="video"
-        src={videos[face]}
-        controls
-        autoPlay
-        style={{ width: '100%', height: '100vh' }}
-      />
-    </div>
+    <Suspense fallback={<p>Loading video...</p>}>
+      <VideoPlayer />
+    </Suspense>
   );
-};
-
-export default VideoPage;
-
-
-
+}
