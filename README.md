@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Future Cube Project
+The Future Cube Project is an interactive 3D experience built with Next.js and Three.js. This project displays a rotating cube where each face represents a different aspect of a sustainable future, such as food systems, water supplies, and environmental conservation. Users can click or tap on each cube face to navigate to video content related to that face's theme.
 
-## Getting Started
+## Overview
+This project utilizes Three.js for rendering a 3D cube with custom textures, and Next.js for page navigation and dynamic routing. Each cube face includes text over an image representing different themes. Users can explore video content associated with each theme by clicking on a face of the cube.
 
-First, run the development server:
+## Features
+- 3D Interactive Cube: A rotating cube with images and text on each face.
+- Responsive Design: Optimized for desktop and mobile.
+- Dynamic Video Navigation: Each cube face navigates to a themed video when clicked.
+- Looping Background Video: A looping background video plays initially to enhance visual engagement.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Structure
+- pages/: Contains the main pages of the app, including the cube display (cube) and the video player (video).
+- components/VideoPlayer.js: Displays video content for the selected cube face.
+- public/: Stores images for cube faces and videos for each theme.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+### Prerequisites
+- Node.js and npm/yarn installed
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Steps
+1. Clone this repository:
+   git clone https://github.com/Diparya/future_cube.git
+   cd future-cube-project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   npm install
 
-## Learn More
+3. Run the development server:
+   npm run dev
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
